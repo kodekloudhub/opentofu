@@ -10,41 +10,52 @@
 2. What file has been created with the local_file resource?
     Quiz: What resource will be created?
 
-        a) terraform.tfstate
+a) terraform.tfstate
     
-        b) terraform.txt
+b) terraform.txt
     
-        c) opentofu.txt
+c) opentofu.txt
     
-        d) opentofu.tfstate
+d) opentofu.tfstate
+
     Solution: b) terraform.txt -- Check the files in the working directory with the `ls` command. There is a new `terraform.txt` file.
 
 
-3. Backup state file via tar
+1. Backup state file via tar
     Solution: Run `tar czf terraform.tfstate.tar.gz terraform.tfstate`
     Validate: Check if the terraform.tfstate.tar.gz is created (if possible check contents if terraform.tfstate exists within the archive)
 
 
 4. Verify OpenTofu version
     Quiz: Which OpenTofu version is installed
-        a) 1.3.2
-        b) 1.7.0
-        c) 1.6.1
-        d) 1.6.2
+
+a) 1.3.2
+
+b) 1.7.0
+
+c) 1.6.1
+
+d) 1.6.2
+
     Solution: c) 1.6.1 - Run `tofu --version` to check the version installed
 
 
-5. Run `tofu init` to initialize the OpenTofu configuration
+1. Run `tofu init` to initialize the OpenTofu configuration
     Solution: Run `tofu init`
     Validate: Check if .terraform directory is created
 
 
 6. Inspect the OpenTofu plan. 
     Quiz: What resource will be created?
-        a) terraform.tfstate
-        b) terraform.txt
-        c) opentofu.txt
-        d) opentofu.tfstate
+
+a) terraform.tfstate
+
+b) terraform.txt
+
+c) opentofu.txt
+
+d) opentofu.tfstate
+
     Solution: b) terraform.txt -- After running `tofu plan` the resource can be found under "filename = "terraform.txt"
 
 
@@ -72,10 +83,15 @@ resource "local_file" "file" {
 
 8. Inspect tofu plan now
     Quiz: What resource will be created?
-        a) terraform.tfstate
-        b) terraform.txt
-        c) opentofu.txt
-        d) opentofu.tfstate
+
+a) terraform.tfstate
+
+b) terraform.txt
+
+c) opentofu.txt
+
+d) opentofu.tfstate
+
     Solution: b) opentofu.txt -- After running `tofu plan` the resource can be found under "filename = "opentofu.txt"
         The main.tf should have the following contents:
 
