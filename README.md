@@ -9,9 +9,13 @@
 
 2. What file has been created with the local_file resource?
     Quiz: What resource will be created?
+
         a) terraform.tfstate
+    
         b) terraform.txt
+    
         c) opentofu.txt
+    
         d) opentofu.tfstate
     Solution: b) terraform.txt -- Check the files in the working directory with the `ls` command. There is a new `terraform.txt` file.
 
